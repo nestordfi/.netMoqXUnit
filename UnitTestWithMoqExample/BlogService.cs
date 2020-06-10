@@ -13,6 +13,7 @@ namespace UnitTestWithMoqExample
         public BlogService(IHtmlValidator htmlValidator, ILog log)
         {
             _htmlValidator = htmlValidator;
+            _log = log;
         }
 
         private void Log(string message, int numero)
