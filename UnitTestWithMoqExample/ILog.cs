@@ -7,6 +7,7 @@ namespace UnitTestWithMoqExample
 {
     public interface ILog
     {
-        void Log(string message);
+        void Log(string message,
+                 int numero);
     }
 }

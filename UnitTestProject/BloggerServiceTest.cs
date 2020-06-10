@@ -27,7 +27,7 @@ namespace UnitTestProject
             var mockLog = new Mock<ILog>();
             
             //cuando se llame al método log, escribimos en el output
-            mockLog.Setup(l => l.Log(It.IsAny<string>())).Callback<string>(param => System.Diagnostics.Debug.Write(param));
+            mockLog.Setup(l => l.Log(It.IsAny<string>(), It.IsAny<int>())).Callback<string>(param => System.Diagnostics.Debug.Write(param));
 
             var mockHtmlValidator = new Mock<IHtmlValidator>();
 
@@ -58,7 +58,10 @@ namespace UnitTestProject
             var mockLog = new Mock<ILog>();
 
             //cuando se llame al método log, escribimos en el output
-            mockLog.Setup(l => l.Log(It.IsAny<string>())).Callback<string>(param => System.Diagnostics.Debug.Write(param));
+            mockLog.Setup(l =>
+                l.Log(It.IsAny<string>(), It.IsAny<int>())).Callback<string>(
+                    param => 
+                    System.Diagnostics.Debug.Write(param));
 
             var mockHtmlValidator = new Mock<IHtmlValidator>();
 
